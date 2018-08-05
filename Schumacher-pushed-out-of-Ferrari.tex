@@ -2,13 +2,24 @@
 \usepackage[b5paper]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{mathpazo}
+\usepackage{mathpazo,tgpagella}
 \usepackage{microtype}
+\linespread{1.05}
+\LoadMicrotypeFile{ppl}
+
+\SetProtrusion
+   [ %name     = T1-ppl,      % the name is optional
+     load     = ppl-T1 ] % 
+   { encoding = T1,
+     family   = ppl }        % 
+   {
+     \textendash = {-50, }, \textemdash = {-25, }  % cancel out left protrusion
+   }
 
 \begin{document}
-The dramatic circumstances of the Italian Grand Prix and Michael Schumacher’s retirement will live on for a long time. After his rival was sidelined by a bizarre stewards’ decision, Schumacher won the race and then announced his retirement. But it was an amazing few hours, worthy of a scripted piece of drama. BusinessF1 retraced the moves that led to that startling finish.
+\noindent The dramatic circumstances of the Italian Grand Prix and Michael Schumacher’s retirement will live on for a long time. After his rival was sidelined by a bizarre stewards’ decision, Schumacher won the race and then announced his retirement. But it was an amazing few hours, worthy of a scripted piece of drama. BusinessF1 retraced the moves that led to that startling finish.
 
-On Sunday 10th September 2006 at 3:25pm, precisely the same time as Michael Schumacher passed the checkered flag to win the Italian Grand Prix, the staff of Ferrari’s press supremo, Luca Colajanni, started handing an A4 sheet of paper to journalists outside the team’s motorhome. It was a one-page press release announcing the retirement of the most successful racing driver in history, a driver at the top of his game challenging for the world championship. Colajanni had been given precise orders by Ferrari chairman Luca di Montezemolo about just what he had to do and when he had to do it.
+On Sunday 10th September 2006 at 3:25pm, precisely the same time as Michael Schumacher passed the chequered flag to win the Italian Grand Prix, the staff of Ferrari’s press supremo, Luca Colajanni, started handing an A4 sheet of paper to journalists outside the team’s motorhome. It was a one-page press release announcing the retirement of the most successful racing driver in history, a driver at the top of his game challenging for the world championship. Colajanni had been given precise orders by Ferrari chairman Luca di Montezemolo about just what he had to do and when he had to do it.
 
 It was strange timing, as Schumacher was about to make the announcement himself in the winner’s press conference after the podium ceremony. Normally press releases are handed out after an announcement has been made, or during it – but rarely before. It takes away the point. As so it turned out when half an hour later Schumacher found himself announcing what everybody already knew.
 
