@@ -1,11 +1,43 @@
-\documentclass[11pt,b5paper]{scrartcl}
+\documentclass[11pt,b5paper,headings=small]{scrartcl}
+\usepackage{graphicx}
+\setkeys{Gin}{width=\columnwidth}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{microtype}
-\usepackage{lmodern}
+\usepackage{libertine}
+\usepackage[spacing,tracking]{microtype}
+\microtypecontext{spacing=nonfrench}
+
+\usepackage{caption}
+\captionsetup{labelfont       = {bf, sf}}
+\usepackage{float}
 %%%
 %%%
+
+\let\origtextfloatsep\textfloatsep
+\setlength{\textfloatsep}{5.5pt}
+\setlength{\intextsep}{5.5pt}
+\setlength{\abovecaptionskip}{5.5pt}
+
+% Levels 
+% I. 		section
+% A.		subsection
+% 1. 		subsubsection
+
+\renewcommand*{\thesection}{\Roman{section}}
+\renewcommand*{\thesubsection}{\Alph{subsection}}
+\renewcommand*{\thesubsubsection}{\arabic{subsubsection}}
+
+\renewcommand{\labelenumi}{\alph{enumi}.}
+
+\addtokomafont{section}{\centering\large}
+\addtokomafont{subsubsection}{\mdseries\scshape}
+
 \begin{document}
+\begin{center}
+\LARGE US v Google%\\[0.75\baselineskip]
+
+%\Large US Department of Justice
+\end{center}
 \iffalse
 %%%
 IN THE UNITED STATES DISTRICT COURT
@@ -62,7 +94,7 @@ GOOGLE LLC
 Mountain View, CA 94043
 Defendant.
 %%%
-\addsec{COMPLAINT}
+\section{\textsc{Complaint}}
 The United States of America, acting under the direction of the Attorney General of the
 United States, and the States of Arkansas, Florida, Georgia, Indiana, Kentucky, Louisiana,
 Mississippi, Missouri, Montana, South Carolina, and Texas, acting through their respective
@@ -81,7 +113,7 @@ I.
 % 1.
 
 %%%
-\addsec{NATURE OF THIS ACTION}
+\section{\textsc{Nature Of This Action}}
 %%%
 \textsc{Two decades ago}, Google became the darling of Silicon Valley as a scrappy
 %%%
@@ -122,13 +154,13 @@ For years, Google has entered into exclusionary agreements, including tying
 %%%
 arrangements, and engaged in anticompetitive conduct to lock up distribution channels and block
 rivals. Google pays billions of dollars each year to distributors—including popular-device
-3
+%%% 3
 %%%
 %%%
 %%%
 manufacturers such as Apple, LG, Motorola, and Samsung; major U.S. wireless carriers such as
-AT\&T, T-Mobile, and Verizon; and browser developers such as Mozilla, Opera, and UCWeb—
-to secure default status for its general search engine and, in many cases, to specifically prohibit
+AT\&T, T-Mobile, and Verizon; and browser developers such as Mozilla, Opera, and UCWeb---to 
+secure default status for its general search engine and, in many cases, to specifically prohibit
 Google’s counterparties from dealing with Google’s competitors. Some of these agreements also
 require distributors to take a bundle of Google apps, including its search apps, and feature them
 on devices in prime positions where consumers are most likely to start their internet searches.
@@ -136,14 +168,14 @@ on devices in prime positions where consumers are most likely to start their int
 % 5.
 
 %%%
-Google’s exclusionary agreements cover just under 60 percent of all general
+Google’s exclusionary agreements cover just under 60~percent of all general
 %%%
-search queries. Nearly half the remaining queries are funneled through Google owned-andoperated properties (e.g., Google’s browser, Chrome). Between its exclusionary contracts and
+search queries. Nearly half the remaining queries are funneled through Google owned-and-operated properties (e.g., Google’s browser, Chrome). Between its exclusionary contracts and
 owned-and-operated properties, Google effectively owns or controls search distribution channels
-accounting for roughly 80 percent of the general search queries in the United States. Largely as a
+accounting for roughly 80~percent of the general search queries in the United States. Largely as a
 result of Google’s exclusionary agreements and anticompetitive conduct, Google in recent years
-has accounted for nearly 90 percent of all general-search-engine queries in the United States, and
-almost 95 percent of queries on mobile devices.
+has accounted for nearly 90~percent of all general-search-engine queries in the United States, and
+almost 95~percent of queries on mobile devices.
 
 % 6.
 
@@ -162,9 +194,9 @@ Google monetizes this search monopoly in the markets for search advertising and
 %%%
 general search text advertising, both of which Google has also monopolized for many years.
 Google uses consumer search queries and consumer information to sell advertising. In the United
-States, advertisers pay about \$40 billion annually to place ads on Google’s search engine results
+States, advertisers pay about \$40~billion annually to place ads on Google’s search engine results
 %%%
-4
+%%% 4
 %%%
 %%%
 %%%
@@ -207,7 +239,7 @@ Google’s practices are anticompetitive under long-established antitrust law.
 %%%
 Almost 20 years ago, the D.C. Circuit in United States v. Microsoft recognized that
 %%%
-5
+%%% 5
 %%%
 %%%
 %%%
@@ -244,7 +276,7 @@ positioning itself to dominate search access points on the next generation of se
 internet-enabled devices such as smart speakers, home appliances, and automobiles (so-called
 internet-of-things, or IoT, devices).
 %%%
-6
+%%% 6
 %%%
 %%%
 %%%
@@ -262,12 +294,11 @@ practices, and use of personal data; and new companies with innovative business 
 emerge from Google’s long shadow. For the sake of American consumers, advertisers, and all
 companies now reliant on the internet economy, the time has come to stop Google’s
 anticompetitive conduct and restore competition.
-II.
 
 % 14.
 
 %%%
-\addsec{JURISDICTION, VENUE, AND COMMERCE}
+\section{\textsc{Jurisdiction, Venue, and Commerce}}
 %%%
 The United States brings this action pursuant to Section 4 of the Sherman Act,
 %%%
@@ -293,7 +324,7 @@ This Court has subject matter jurisdiction over this action under Section 4 of t
 %%%
 Sherman Act, 15 U.S.C. § 4, and 28 U.S.C. §§ 1331, 1337(a), and 1345.
 %%%
-7
+%%% 7
 %%%
 %%%
 %%%
@@ -317,13 +348,11 @@ Delaware and headquartered in Mountain View, California. Google engages in, and 
 substantially affect, interstate trade and commerce. Google provides a range of products and
 services that are marketed, distributed, and offered to consumers throughout the United States, in
 the plaintiff States, across state lines, and internationally.
-III.
+
 %%%
-\addsec{INDUSTRY BACKGROUND}
+\section{\textsc{Industry Background}}
 %%%
-A.
-%%%
-Search Engines, Search Advertising, and General Search Text Advertising
+\subsection{Search Engines, Search Advertising, and General Search Text Advertising}
 %%%
 
 % 19.
@@ -336,7 +365,7 @@ to search and index the growing number of internet sites. The first computer pro
 University in Montreal and called “Archie.” Other early general search engines emerged, with
 different methods of gathering, organizing, and presenting information about internet sites.
 Google’s founders launched their research project “Backrub” on Stanford University’s network
-in 1996.
+in~1996.
 
 % 20.
 
@@ -347,7 +376,7 @@ indexing webpages and the information within them. As Google explains, “The we
 ever-growing library with billions of books and no central filing system. We use software known
 as web crawlers to discover publicly available webpages. Crawlers look at webpages and follow
 %%%
-8
+%%% 8
 %%%
 %%%
 %%%
@@ -384,7 +413,7 @@ General search engines are “one-stop shops” consumers can use to search the
 %%%
 internet for answers to a wide range of queries. The United States has only three general search
 engines that crawl the internet: Google, Bing, and, to a lesser extent, privacy-focused search
-provider DuckDuckGo. DuckDuckGo combines search results from different sources (including
+provider DuckDuckGo\@. DuckDuckGo combines search results from different sources (including
 Bing) depending on the search query. A fourth general search engine, Yahoo!, does not currently
 crawl the internet and instead purchases search results from Bing.
 
@@ -395,7 +424,7 @@ Consumers can find certain specialized information online using sources other
 %%%
 than general search engines. For example, consumers can search retail marketplaces such as
 %%%
-9
+%% 9
 %%%
 %%%
 %%%
@@ -450,7 +479,23 @@ advertisers typically refer to a “purchase funnel” or “customer acquisitio
 average consumer’s various states of mind leading up to a potential purchase, and the type of
 advertising most effective at each state. The following is an illustration of the purchase funnel:
 %%%
-Figure 1
+
+\begin{figure}[h]
+\centering
+\sffamily
+% Figure~1
+\caption{}
+\begin{tabular}{c}
+\textbf{The Consumer Purchase Funnel}\\
+Ad Recall \\
+Brand Awareness \\
+Brand Interest \\
+Consideration \\
+Favorability \\
+Intent \\
+Purchase
+\end{tabular}
+\end{figure}
 
 % 29.
 
@@ -472,6 +517,24 @@ Historically, general search engines such as Google sold only general search tex
 ads. General search text ads resemble the organic search results that appear on a SERP—what
 Google refers to as the “10 blue links”—but with a subtle notation that they are “ads” or
 “sponsored.” Google describes its text ads as follows:
+
+\begin{figure}[!ht]
+\caption{}
+\includegraphics{US-v-Google-Complaint-figures/fig2.png}
+\end{figure}
+
+Over time, general search engines also began to sell some specialized search ads,
+which promoted specific categories of goods and services such as retail products, 
+hotel rooms, or local services such as locksmiths and plumbers. Figure~3 shows a 
+Google SERP that includes from top to bottom, specialized search ads (in this case,
+Google ``Shopping Ads'', designed specifically to sell retail products), a general 
+search text ad, and an organic search result.
+
+\begin{figure}[!ht]
+\caption{}
+\includegraphics{US-v-Google-Complaint-figures/fig3.png}
+\end{figure}
+
 %%%
 %%%
 %%%
@@ -506,9 +569,9 @@ Today, the search advertising business in the United States is enormous—over
 company’s search ads have become a “must have” for many advertisers. Advertising agencies
 and larger companies often have entire groups that manage search advertising, mostly focused on
 Google.
-B.
-%%%
-Importance of Scale
+
+% B.
+\subsection{Importance of Scale}
 %%%
 
 % 35.
@@ -526,9 +589,9 @@ revenue and profits.
 %%%
 The additional data from scale allows improved automated learning for algorithms
 %%%
-to deliver more relevant results, particularly on “fresh” queries (queries seeking recent
-information), location-based queries (queries asking about something in the searcher’s vicinity),
-and “long-tail” queries (queries used infrequently).
+to deliver more relevant results, particularly on `fresh' queries (queries seeking recent
+information), location-based queries (queries asking about something in the searcher's vicinity),
+and `long-tail' queries (queries used infrequently).
 
 % 37.
 
@@ -553,9 +616,11 @@ competitor that syndicates its search results from other general search engines 
 substantial investments to compete. The most effective way to achieve scale is for the general
 search engine to be the preset default on mobile devices, computers, and other devices, as
 described in more detail below.
-C.
+
+%%% C.
+\subsection{
 %%%
-General Search Engine Distribution and Default Status
+General Search Engine Distribution and Default Status}
 %%%
 
 % 39.
@@ -600,9 +665,9 @@ consumers rarely change the preset default.
 % 42.
 
 %%%
-The Mobile Search Distribution Channel
+\subsubsection{The Mobile Search Distribution Channel}
 %%%
-With roughly 60 percent of searches, mobile devices represent the largest and,
+With roughly 60~percent of searches, mobile devices represent the largest and,
 %%%
 over the last five years, fastest growing search distribution channel.
 
@@ -611,9 +676,9 @@ over the last five years, fastest growing search distribution channel.
 %%%
 In the United States, Apple iOS devices—those running on Apple’s proprietary
 %%%
-mobile operating system—account for roughly 60 percent of mobile-device usage. Apple’s iOS
+mobile operating system—account for roughly 60~percent of mobile-device usage. Apple’s iOS
 is a closed ecosystem; Apple does not license iOS to third-party mobile-device manufacturers.
-Another roughly 40 percent of mobile-device usage comes from devices that use Android, an
+Another roughly 40~percent of mobile-device usage comes from devices that use Android, an
 open-source mobile operating system controlled by Google. Unlike iOS, Android is licensable,
 which means third-party mobile-device manufacturers can use it as the operating system for their
 devices. All other mobile operating systems, combined, account for less than one percent of
@@ -625,17 +690,22 @@ mobile-device usage in the United States.
 General search services can be delivered to mobile-device users through a variety
 %%%
 of search access points, including: (1) a browser, (2) a static search bar (search widget, referred
-to in Figure 4 as the QSB or quick search box) on the device’s home screen, (3) a search app,
+to in Figure~4 as the QSB or quick search box) on the device’s home screen, (3) a search app,
 (4) artificial intelligence software (voice assistants) accessed by a button or voice command and
 designed to answer voice-initiated queries, and (5) other apps that link to general search engines,
-such as smart keyboards. Figure 4, from a 2018 Google strategy deck, provides a more specific
+such as smart keyboards. Figure~4, from a 2018 Google strategy deck, provides a more specific
 breakdown of how Google delivers its general search service on Android devices.
 %%%
 %%%
 %%%
 %%%
 %%%
-Figure 4
+\begin{figure}
+\centering
+\caption{}
+\includegraphics[width=0.7\textwidth]{US-v-Google-Complaint-figures/fig4.png}
+\end{figure}
+% Figure~4
 
 % 45.
 
@@ -656,8 +726,8 @@ access points on mobile devices sold in the United States.
 %%%
 For mobile browsers, Google is the default search provider for both Apple Safari
 %%%
-(approximately 55 percent share) and Google Chrome (over 35 percent share), which together
-account for over 90 percent of the browser usage on mobile devices in the United States.
+(approximately 55~percent share) and Google Chrome (over 35~percent share), which together
+account for over 90~percent of the browser usage on mobile devices in the United States.
 %%%
 %%%
 %%%
@@ -685,7 +755,7 @@ preinstalling search access points on mobile devices and computers.
 % 48.
 
 %%%
-The Computer Search Distribution Channel
+\subsubsection{The Computer Search Distribution Channel}
 %%%
 When using a computer, most consumers access a general search engine through a
 %%%
@@ -699,10 +769,10 @@ browser; this offers users a convenient way to start their search experience.
 %%%
 In the United States, Google Chrome is the leading computer browser, with
 %%%
-almost 60 percent market share. Apple’s Safari browser has approximately 16 percent share on
-computers. Mozilla’s Firefox has approximately 7 percent share, and Microsoft’s Edge and
-Internet Explorer together have approximately 15 percent share. Other small browsers have a
-combined share of less than 4 percent. With the exception of Microsoft, most browser developers
+almost 60~percent market share. Apple’s Safari browser has approximately 16~percent share on
+computers. Mozilla’s Firefox has approximately 7~percent share, and Microsoft’s Edge and
+Internet Explorer together have approximately 15~percent share. Other small browsers have a
+combined share of less than 4~percent. With the exception of Microsoft, most browser developers
 have agreed with Google to preset its search engine as the default search provider.
 %%%
 %%%
@@ -725,9 +795,11 @@ For both mobile and computer search access points, being preset as the default i
 %%%
 the most effective way for general search engines to reach users, develop scale, and become or
 remain competitive.
-D.
+
+%%% D.
+\subsection{
 %%%
-Distribution Agreements in Mobile and Computer Channels
+Distribution Agreements in Mobile and Computer Channels}
 %%%
 
 % 52.
@@ -736,9 +808,9 @@ Distribution Agreements in Mobile and Computer Channels
 General search services providers typically enter into licensing and distribution
 %%%
 agreements with manufacturers and carriers that distribute mobile devices with search access
-points. In the United States, roughly 60 percent of all search queries are covered by Google’s
+points. In the United States, roughly 60~percent of all search queries are covered by Google’s
 exclusionary agreements. On mobile devices, Google’s exclusionary agreements cover more than
-80 percent of all U.S. search queries.
+80~percent of all U.S. search queries.
 
 % 53.
 
@@ -748,7 +820,7 @@ Of the remaining search queries not covered by Google’s exclusionary contracts
 almost half take place on search access points owned by Google. Google is a vertically integrated
 search provider and distributes search in part through several of its own properties, including for
 example its browser (Chrome) and phone (Pixel). Between its exclusionary contracts and ownedand-operated properties, Google effectively owns or controls search distribution channels
-accounting for roughly 80 percent of the general search queries in the United States.
+accounting for roughly 80~percent of the general search queries in the United States.
 
 % 54.
 
@@ -802,7 +874,7 @@ and advertisers by denying them scale.
 % 58.
 
 %%%
-Background on Mobile Strategy and Development of Android Ecosystem
+\subsubsection{Background on Mobile Strategy and Development of Android Ecosystem}
 %%%
 Google’s anticompetitive agreements must be understood against the backdrop of
 %%%
@@ -883,9 +955,9 @@ Play” app store has a massive library of apps, making it essential for Android
 on their devices. As for the operating system itself, it quickly became the dominant licensable
 mobile operating system in the United States. In the four years between 2009 and 2012,
 Android’s share of licensable mobile operating systems on smartphones in the United States
-more than tripled, reaching about 80 percent. Today, Android represents over 95 percent of
+more than tripled, reaching about 80~percent. Today, Android represents over 95~percent of
 licensable mobile operating systems for smartphones and tablets in the United States and
-accounts for over 70 percent of all mobile device usage worldwide. The only other mobile
+accounts for over 70~percent of all mobile device usage worldwide. The only other mobile
 operating system with significant market share in the United States is Apple’s iOS, which is not
 licensable.
 
@@ -903,7 +975,11 @@ could support a different search provider.
 %%%
 %%%
 %%%
-Figure 5
+% Figure~5
+\begin{figure}
+\caption{}
+\includegraphics{US-v-Google-Complaint-figures/fig5.png}
+\end{figure}
 
 % 2.
 
@@ -911,8 +987,8 @@ Figure 5
 % 66.
 
 %%%
-Anti-Fragmentation Agreements and Compatibility Commitments
-(Android Mobile Devices)
+\subsubsection{Anti-Fragmentation Agreements and Compatibility Commitments
+(Android Mobile Devices)}
 %%%
 The Android operating system is open source; Google updates the Android code
 %%%
@@ -981,7 +1057,7 @@ these products must comply with Google’s standards as well.
 % 72.
 
 %%%
-Mobile Application Distribution Agreements (Android Mobile Devices)
+\subsubsection{Mobile Application Distribution Agreements (Android Mobile Devices)}
 %%%
 Manufacturers agree to anti-forking agreements in part because they are a
 %%%
@@ -1007,7 +1083,7 @@ many popular apps, such as Google’s search app, Chrome, YouTube, and Google Ma
 also includes Google Play, Google’s app store. An app store is one of the most valuable features
 of a mobile device because it offers access to compatible apps that do not come preinstalled on
 the device. Google Play offers about three million apps, more than any other app store (including
-Apple’s App Store, which is compatible only with Apple devices). More than 90 percent of apps
+Apple’s App Store, which is compatible only with Apple devices). More than 90~percent of apps
 on Android devices are downloaded through Google Play. For years, Google Play has been the
 only commercially significant app store option for Android manufacturers.
 
@@ -1067,7 +1143,7 @@ discussed below.
 % 78.
 
 %%%
-Revenue Sharing Agreements (Android Mobile Devices)
+\subsubsection{Revenue Sharing Agreements (Android Mobile Devices)}
 %%%
 Google enters into search revenue sharing agreements (RSAs) with Android
 %%%
@@ -1109,7 +1185,7 @@ close off these avenues to search rivals.
 % 81.
 
 %%%
-Mobile Incentive Agreements (Android Mobile Devices)
+\subsubsection{Mobile Incentive Agreements (Android Mobile Devices)}
 %%%
 In Google’s latest round of negotiations with some Android manufacturers,
 %%%
@@ -1142,7 +1218,7 @@ Today, Google has revenue sharing agreements (RSAs or MIAs) with all major
 %%%
 U.S. carriers and Android device manufacturers, as well as a number of smaller carriers and
 manufacturers. Google’s revenue sharing agreements (and preinstallation agreements) with
-Android device manufacturers, together, account for more than 30 percent of mobile device
+Android device manufacturers, together, account for more than 30~percent of mobile device
 usage in the United States.
 
 % 6.
@@ -1151,7 +1227,7 @@ usage in the United States.
 % 84.
 
 %%%
-Revenue Sharing Agreements (Apple and Others)
+\subsubsection{Revenue Sharing Agreements (Apple and Others)}
 %%%
 Google’s revenue sharing agreements are not limited to its Android partners.
 %%%
@@ -1167,8 +1243,8 @@ Apple, effectively locking up one of the most significant distribution channels 
 engines. Apple operates a tightly controlled ecosystem and produces both the hardware and the
 operating system for its popular products. Apple does not license its operating systems to thirdparty manufacturers and controls preinstallation of all apps on its products. The Safari browser is
 the preinstalled default browser on Apple computer and mobile devices. Apple devices account
-for roughly 60 percent of mobile device usage in the United States. Apple’s Mac OS accounts for
-approximately 25 percent of the computer usage in the United States.
+for roughly 60~percent of mobile device usage in the United States. Apple’s Mac OS accounts for
+approximately 25~percent of the computer usage in the United States.
 
 % 86.
 
@@ -1196,10 +1272,12 @@ Today, Google has RSAs with nearly every significant, non-Google browser other
 than those distributed by Microsoft, including Mozilla’s Firefox, Opera, and UCWeb. These
 agreements generally require the browsers to make Google the preset default general search
 engine for each search access point on both their web and mobile versions.
-IV.
-A.
-%%%
-General Search Services in the United States
+
+% \section{III. \textsc{General markets}}
+
+\section{\rmfamily\textsc{Relevant Markets}}
+
+\subsection{General Search Services in the United States}
 
 % 1.
 
@@ -1208,10 +1286,10 @@ General Search Services in the United States
 % 88.
 
 %%%
-\addsec{RELEVANT MARKETS}
+
 %%%
-General Search Services in the United States Is a Relevant Antitrust
-Market
+\subsubsection{General Search Services in the United States Is a Relevant Antitrust
+Market}
 %%%
 General search services in the United States is a relevant antitrust market. General
 %%%
@@ -1264,21 +1342,25 @@ United States is a relevant geographic market.
 % 92.
 
 %%%
-Google Has Monopoly Power in the General Search Services Market in
-the United States
+\subsubsection{Google Has Monopoly Power in the General Search Services Market in
+the United States}
 %%%
 Google has monopoly power in the United States general search services market.
 %%%
 There are currently only four meaningful general search providers in this market: Google, Bing,
 Yahoo!, and DuckDuckGo. According to public data sources, Google today dominates the
-market with approximately 88 percent market share, followed far behind by Bing with about
+market with approximately 88~percent market share, followed far behind by Bing with about
 seven percent, Yahoo! with less than four percent, and DuckDuckGo with less than two percent.
 %%%
 %%%
 %%%
 %%%
 %%%
-Figure 6
+\begin{figure}
+\caption{}
+\includegraphics{US-v-Google-Complaint-figures/fig6.png}
+\end{figure}
+% Figure~6
 
 % 93.
 
@@ -1286,22 +1368,27 @@ Figure 6
 Over the years, Google has steadily increased its dominant position in general
 %%%
 search services. In July 2007, Google estimated its general search services market share at
-68 percent. By June 2013, Google estimated that its share in the United States had already
-increased to 77 percent on computers. By April 2018, Google estimated that its share was
-79 percent on computers and 93.5 percent on mobile. More recently, Google has accounted for
-almost 90 percent of all general search engine queries in the United States, and almost 95 percent
+68~percent. By June 2013, Google estimated that its share in the United States had already
+increased to 77~percent on computers. By April 2018, Google estimated that its share was
+79~percent on computers and 93.5~percent on mobile. More recently, Google has accounted for
+almost 90~percent of all general search engine queries in the United States, and almost 95~percent
 of queries on mobile devices. Recent share estimates are in Figures 7 and 8.
 %%%
 %%%
 %%%
 %%%
 %%%
-Figure 7
+% Figure~7
 
-% 94.
+% % 94.
 
-%%%
-Figure 8
+% %%%
+% Figure~8
+\begin{figure}
+\caption*{\textbf{Figure 7\qquad Figure 8}}
+\includegraphics{US-v-Google-Complaint-figures/fig7.png}
+\end{figure}
+
 %%%
 There are significant barriers to entry in general search services. The creation,
 %%%
@@ -1325,10 +1412,9 @@ the scale necessary to compete.
 Google’s large and durable market share and the significant barriers to entry in
 %%%
 general search services demonstrate Google’s monopoly power in the United States.
-B.
 %%%
-Search Advertising in the United States and General Search Text Advertising in
-the United States Are Relevant Antitrust Markets
+\subsection{B. Search Advertising in the United States and General Search Text Advertising in
+the United States Are Relevant Antitrust Markets}
 
 % 1.
 
@@ -1337,7 +1423,7 @@ the United States Are Relevant Antitrust Markets
 % 97.
 
 %%%
-Search Advertising Is a Relevant Product Market
+\subsubsection{Search Advertising Is a Relevant Product Market}
 %%%
 Search advertising in the United States is a relevant antitrust market. The search
 %%%
@@ -1390,7 +1476,7 @@ competitive market.
 % 101.
 
 %%%
-General Search Text Advertising Is a Relevant Product Market
+\subsubsection{General Search Text Advertising Is a Relevant Product Market}
 %%%
 There also is a relevant product market for general search text advertising that is
 %%%
@@ -1401,11 +1487,11 @@ wholly contained within the broader search advertising market. General search te
 %%%
 by general search engines, typically placed just above or below the organic search results on a
 SERP, and resemble the organic results that appear on a general search engine’s SERP, with a
-subtle notation that they are “ads” or “sponsored.” In contrast, other types of search ads—
-specifically, specialized search ads—typically are visually different from general search text ads
+subtle notation that they are “ads” or “sponsored.” In contrast, other types of search 
+ads---specifically, specialized search ads---typically are visually different from general search text ads
 and convey different types of information. For example, a Google Shopping Ad normally
-includes an image of the product, its price, and star-based ratings (see Figure 3). In 2018, general
-search text ads accounted for close to 85 percent of Google’s search ad revenue.
+includes an image of the product, its price, and star-based ratings (see Figure~3). In 2018, general
+search text ads accounted for close to 85~percent of Google’s search ad revenue.
 
 % 102.
 
@@ -1505,7 +1591,7 @@ Search Text Advertising Markets in the United States
 Google has monopoly power in the search advertising market. Based on public
 %%%
 estimates of total search advertising spending in the United States, Google’s share of the U.S.
-search advertising market is over 70 percent. This market share understates Google’s market
+search advertising market is over 70~percent. This market share understates Google’s market
 power in search advertising because many search-advertising competitors offer only specialized
 search ads and thus compete with Google only in a limited portion of the market.
 
@@ -1515,7 +1601,7 @@ search ads and thus compete with Google only in a limited portion of the market.
 Google also has monopoly power in the general search text advertising market.
 %%%
 Google’s market share of the U.S. general search text advertising market also exceeds
-70 percent. Google’s share of the general search text advertising market well exceeds its share of
+70~percent. Google’s share of the general search text advertising market well exceeds its share of
 the search advertising market.
 
 % 110.
@@ -1536,12 +1622,12 @@ search text advertising monopoly.
 %%%
 %%%
 %%%
-V.
+% V.
 
 % 111.
 
 %%%
-\addsec{ANTICOMPETITIVE CONDUCT}
+\section{\textsc{Anticompetitive Conduct}}
 %%%
 Google is a monopolist in the general search services, search advertising, and
 %%%
@@ -1555,7 +1641,7 @@ Google has unlawfully maintained its monopolies by implementing and enforcing
 %%%
 a series of exclusionary agreements with distributors over at least the last decade. Particularly
 when taken together, Google’s exclusionary agreements have denied rivals access to the most
-important distribution channels. In fact, Google’s exclusionary contracts cover almost 60 percent
+important distribution channels. In fact, Google’s exclusionary contracts cover almost 60~percent
 of U.S. search queries. Almost half the remaining searches are funneled through properties
 owned and operated directly by Google. As a result, the large majority of searches are covered
 by Google’s exclusionary contracts and own properties, leaving only a small fraction for
@@ -1596,9 +1682,10 @@ In sum, Google deprives rivals of the quality, reach, and financial position
 %%%
 necessary to mount any meaningful competition to Google’s longstanding monopolies. By
 foreclosing competition from rivals, Google harms consumers and advertisers.
-A.
+
+%%A.
 %%%
-Google’s Agreements Lock Up Mobile Distribution of Search
+\subsection{Google's Agreements Lock Up Mobile Distribution of Search}
 %%%
 
 % 116.
@@ -1627,7 +1714,7 @@ volume.”
 % 118.
 
 %%%
-Distribution on Apple iOS Devices
+\subsubsection{Distribution on Apple iOS Devices}
 %%%
 Apple has not developed and does not offer its own general search engine. Under
 %%%
@@ -1636,7 +1723,7 @@ make Google’s search engine the default for Safari, and use Google for Siri an
 response to general search queries. In exchange for this privileged access to Apple’s massive
 consumer base, Google pays Apple billions of dollars in advertising revenue each year, with
 public estimates ranging around \$8–12 billion. The revenues Google shares with Apple make up
-approximately 15–20 percent of Apple’s worldwide net income.
+approximately 15–20~percent of Apple’s worldwide net income.
 %%%
 %%%
 %%%
@@ -1668,11 +1755,11 @@ counterpart: “Our vision is that we work as if we are one company.”
 % 121.
 
 %%%
-The current version of the Google–Apple agreement substantially forecloses
+The current version of the Google-Apple agreement substantially forecloses
 %%%
-Google’s search rivals from an important distribution channel for a significant, multi-year term.
-This agreement covers roughly 36 percent of all general search queries in the United States,
-including mobile devices and computers. Google estimates that, in 2019, almost 50 percent of its
+Google's search rivals from an important distribution channel for a significant, multi-year term.
+This agreement covers roughly 36~percent of all general search queries in the United States,
+including mobile devices and computers. Google estimates that, in 2019, almost 50~percent of its
 search traffic originated on Apple devices.
 
 % 122.
@@ -1738,12 +1825,14 @@ concluded that only one percent of Google’s worldwide Android search revenue w
 %%%
 risk to competitors. This analysis noted that the growth in Google’s search advertising revenue
 from Android distribution was “driven by increased platform protection efforts and agreements.”
-a)
+
+\begin{enumerate}
+% a)
 
 % 126.
 
 %%%
-Anti-Forking Agreements
+\item \textit{Anti-Forking Agreements}\quad
 %%%
 An alternative operating system could serve as a pathway for distribution of
 %%%
@@ -1836,13 +1925,11 @@ b)
 % 133.
 
 %%%
-Preinstallation Agreements
-%%%
-Google uses preinstallation agreements—MADAs—to ensure that its entire suite
-%%%
+\item \textit{Preinstallation Agreements}\quad
+Google uses preinstallation agreements -- MADAs -- to ensure that its entire suite
 of search-related products is given premium placement on Android GMS devices. Consumers
 naturally and regularly turn to these prominently placed search access points to conduct searches.
-Preinstallation agreements also reinforce Google’s anti-forking requirements, either by including
+Preinstallation agreements also reinforce Google's anti-forking requirements, either by including
 an anti-forking clause of their own or, more commonly, requiring device manufacturers to be
 signatories to an anti-forking agreement.
 
@@ -1896,9 +1983,12 @@ preinstalled version of Chrome is preset to default to Google search. A senior e
 Google referred to changing Chrome’s preset search default as “totally off the table” and insisted
 that if a manufacturer “values their MADA, they cannot modify Chrome’s settings.” The result is
 that Google locks up the access points to general search on Android phones, as shown in
-Figure 9:
+Figure~9:
 %%%
-Figure 9
+\begin{figure}
+\caption{}
+\includegraphics{US-v-Google-Complaint-figures/fig9.PNG}
+\end{figure}
 %%%
 %%%
 %%%
@@ -1979,12 +2069,12 @@ including Google Play and GPS, and forfeit any potential cut of Google’s searc
 revenue under a revenue sharing agreement. In short, as the above examples illustrate, Google’s
 documents show its efforts to discipline its counterparties, including major electronics companies
 and carriers.
-c)
+%c)
 
 % 144.
 
 %%%
-Revenue Sharing Agreements
+\item \textit{Revenue Sharing Agreements}\quad
 %%%
 In exchange for a substantial portion of Google’s search advertising revenues,
 %%%
@@ -2008,9 +2098,14 @@ exclusivity of Search” and its deals with carriers similarly “prevent[] the 
 Search engines or browsers,” thus enabling Google “to protect Search exclusivity on the device
 as it makes its way to the user.”
 %%%
-Figure 10 (Android manufacturers)
+\begin{figure}
+\includegraphics{US-v-Google-Complaint-figures/fig10.PNG}
+\caption{(Android manufacturers)}
+
 %%%
-Figure 11 (Android carriers)
+\includegraphics{US-v-Google-Complaint-figures/fig11.PNG}
+\caption{(Android carriers)}
+\end{figure}
 %%%
 %%%
 %%%
@@ -2132,9 +2227,10 @@ substantial barrier to entry. These entrants cannot pay the billions of dollars 
 the most effective forms of distribution—premium placement and default status. Instead, they are
 relegated to inferior forms of distribution that do not allow them to build scale, gain brand
 recognition, and generate momentum to challenge Google.
-B.
+\end{enumerate}
+%B.
 %%%
-Google Agreements Lock Up Browser Distribution
+\subsection{Google Agreements Lock Up Browser Distribution}
 %%%
 
 % 156.
@@ -2152,7 +2248,7 @@ search access points in both the browser’s computer and mobile versions.
 %%%
 In exchange for being the preset default general search engine, Google shares up
 %%%
-to 40 percent of the advertising revenue it generates from these search access points with
+to 40~percent of the advertising revenue it generates from these search access points with
 Google’s browser rivals. Browser revenue sharing agreements typically last at least two years
 and are routinely extended.
 %%%
@@ -2170,7 +2266,7 @@ services because they are the gateway to the internet for most consumers. Many s
 on mobile devices and computers are performed through the device’s browser. Today, Google
 has revenue sharing agreements with the most widely used browsers in the United States, such as
 Apple’s Safari browser and Mozilla’s Firefox browser; Microsoft’s browsers are the only notable
-exceptions. Over 85 percent of all browser usage in the United States occurs on Google’s own
+exceptions. Over 85~percent of all browser usage in the United States occurs on Google’s own
 Chrome browser or on one of the browsers covered by these revenue sharing agreements.
 
 % 159.
@@ -2186,10 +2282,11 @@ would have the ability to consider making other general search engines the prese
 some or all search access points, spurring greater competition in the general search services
 market and offering additional choices to consumers. As a Google employee once noted,
 Google’s browser agreements can be “a good way to keep [a browser] away from Bing.”
-C.
+% C.
 %%%
-Google Is Positioning Itself to Control the Next Generation of Search
-Distribution Channels
+
+\subsection{Google Is Positioning Itself to Control the Next Generation of Search
+Distribution Channels}
 %%%
 
 % 160.
@@ -2266,36 +2363,38 @@ Google therefore aims to control emerging search access points to protect its
 monopolies in the general search services, search advertising, and general search text advertising
 markets in the present and the future. Google is poised to ensure that history repeats itself, and
 that all search access points funnel users in one direction: toward Google.
-VI.
+
+% VI.
 
 % 166.
 
 %%%
-\addsec{ANTICOMPETITIVE EFFECTS}
+\section{\textsc{Anticompetitive Effects}}
 %%%
 Google has maintained unlawful monopolies in the general search services, search
 %%%
 advertising, and general search text advertising markets through its many exclusionary
 agreements and other conduct that have separately and collectively harmed competition by:
-a.
+\begin{enumerate}
+\item
 %%%
 Substantially foreclosing competition in general search services and
 protecting a large majority of search queries in the United States against
 any meaningful competition;
 %%%
-b.
+\item
 %%%
 Excluding general search services rivals from effective distribution
 channels, thereby denying rivals the necessary scale to compete effectively
 in the general search services, search advertising, and general search text
 advertising markets;
 %%%
-c.
+\item
 %%%
 Impeding other potential distribution paths for general search services
 rivals;
 %%%
-d.
+\item
 %%%
 Increasing barriers to entry and excluding competition at emerging search
 access points from nascent competitors on both computers and mobile
@@ -2305,17 +2404,18 @@ devices;
 %%%
 %%%
 %%%
-e.
+\item
 %%%
 Stunting innovation in new products that could serve as alternative search
 access points or disruptors to the traditional Google search model; and
 %%%
-f.
+\item
 %%%
 Insulating Google from significant competitive pressure to improve its
 general search, search advertising, and general search text advertising
 products and services.
 %%%
+\end{enumerate}
 
 % 167.
 
@@ -2396,17 +2496,17 @@ benefits could be accomplished by less restrictive means.
 %%%
 %%%
 %%%
-VII.
+% VII.
 %%%
-VIOLATIONS ALLEGED
+\section{\textsc{Violations Alleged}}
 %%%
-First Claim for Relief: Maintaining Monopoly of General Search Services in Violation of
-Sherman Act § 2
+\textit{First Claim for Relief: Maintaining Monopoly of General Search Services in Violation of
+Sherman Act § 2}
 
 % 173.
 
 %%%
-Plaintiffs incorporate the allegations of paragraphs 1 through 172 above.
+Plaintiffs incorporate the allegations of paragraphs above.
 %%%
 
 % 174.
@@ -2454,13 +2554,15 @@ procompetitive benefits in this market, or can be achieved through less restrict
 Google’s anticompetitive and exclusionary practices violate Section 2 of the
 %%%
 Sherman Act, 15 U.S.C. § 2.
-Second Claim for Relief: Maintaining Monopoly of Search Advertising in Violation of
-Sherman Act § 2
+
+\textit{Second Claim for Relief: Maintaining Monopoly of Search Advertising in Violation of
+Sherman Act § 2}
 
 % 180.
 
 %%%
-Plaintiffs incorporate the allegations of paragraphs 1 through 172 above.
+% Plaintiffs incorporate the allegations of paragraphs 1 through 172 above.
+Plaintiffs incorporate the allegations of paragraphs above.
 %%%
 
 % 181.
@@ -2513,13 +2615,15 @@ procompetitive benefits in this market, or can be achieved through less restrict
 Google’s anticompetitive and exclusionary practices violate Section 2 of the
 %%%
 Sherman Act, 15 U.S.C. § 2.
-Third Claim for Relief: Maintaining Monopoly of General Search Text Advertising in
-Violation of Sherman Act § 2
+
+\textit{Third Claim for Relief: Maintaining Monopoly of General Search Text Advertising in
+Violation of Sherman Act § 2}
 
 % 187.
 
 %%%
-Plaintiffs incorporate the allegations of paragraphs 1 through 172 above.
+% Plaintiffs incorporate the allegations of paragraphs 1 through 172 above.
+Plaintiffs incorporate the allegations of paragraphs above.
 %%%
 
 % 188.
@@ -2572,35 +2676,37 @@ procompetitive benefits in this market, or can be achieved through less restrict
 Google’s anticompetitive and exclusionary practices violate Section 2 of the
 %%%
 Sherman Act, 15 U.S.C. § 2.
-VIII. REQUEST FOR RELIEF
+
+\section{\textsc{Request for Relief}}
 
 % 194.
 
 %%%
 To remedy these illegal acts, Plaintiffs request that the Court:
-a.
+\begin{enumerate}
+\item
 %%%
 Adjudge and decree that Google acted unlawfully to maintain general
 search services, search advertising, and general search text advertising
 monopolies in violation of Section 2 of the Sherman Act, 15 U.S.C. § 2;
 %%%
-b.
+\item
 %%%
 Enter structural relief as needed to cure any anticompetitive harm;
 %%%
-c.
+\item
 %%%
 Enjoin Google from continuing to engage in the anticompetitive practices
 described herein and from engaging in any other practices with the same
 purpose and effect as the challenged practices;
 %%%
-d.
+\item
 %%%
 Enter any other preliminary or permanent relief necessary and appropriate
 to restore competitive conditions in the markets affected by Google’s
 unlawful conduct;
 %%%
-e.
+\item
 %%%
 Enter any additional relief the Court finds just and proper; and
 %%%
@@ -2608,7 +2714,7 @@ Enter any additional relief the Court finds just and proper; and
 %%%
 %%%
 %%%
-f.
+\item
 %%%
 Award each Plaintiff an amount equal to its costs incurred in bringing this
 action on behalf of its citizens.
@@ -2617,11 +2723,15 @@ action on behalf of its citizens.
 %%%
 %%%
 %%%
+\end{enumerate}
+
 Respectfully submitted,
 October 20, 2020
 FOR PLAINTIFF UNITED STATES OF AMERICA,
 /s/ Ryan A. Shores
 RYAN A. SHORES (D.C. Bar \#500031)
+
+\iffalse
 Associate Deputy Attorney General,
 Senior Advisor for Technology Industries
 %%%
@@ -2829,5 +2939,6 @@ Office of the Attorney General, State of Texas
 Austin, Texas 78701
 Phone: 512-936-1674
 Email: Bret.Fulkerson@oag.texas.gov
+\fi
 %%%
 \end{document}
